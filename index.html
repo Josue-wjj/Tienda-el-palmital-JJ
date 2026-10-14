@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultá productos y precios de Tienda El Palmital J&J y hacé tu pedido por WhatsApp.">
+    <title>Tienda El Palmital J&J</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="encabezado">
+    <a href="#" class="marca">
+        <span class="logo">J&amp;J</span>
+        <span>
+            <strong>Tienda El Palmital J&amp;J</strong>
+            <small>Todo lo que necesitás, cerca de vos.</small>
+        </span>
+    </a>
+    <button id="btn-carrito" class="boton-carrito">
+        🛒 Mi carrito (<span id="cantidad-carrito">0</span>)
+    </button>
+</header>
+
+<section class="portada">
+    <p class="etiqueta">BIENVENIDOS A NUESTRA TIENDA</p>
+    <h1>Comprá fácil, sin salir de casa.</h1>
+    <p>Buscá tus productos favoritos y hacé tu pedido por WhatsApp.</p>
+    <div class="aviso-envio">
+        🚚 ¡Envío gratis en compras desde $10.00!
+    </div>
+</section>
+
+<main class="contenedor">
+    <div class="busqueda">
+        <input type="search" id="buscador"
+            placeholder="🔎 ¿Qué producto buscás?"
+            aria-label="Buscar productos">
+    </div>
+
+    <nav id="categorias" class="categorias"
+        aria-label="Categorías de productos"></nav>
+
+    <div class="titulo-productos">
+        <h2 id="titulo-categoria">Todos los productos</h2>
+        <span id="total-productos"></span>
+    </div>
+
+    <section id="productos" class="productos" aria-live="polite">
+        <p>Cargando productos...</p>
+    </section>
+
+    <section id="seccion-carrito" class="panel-carrito">
+        <div class="titulo-productos">
+            <h2>🛒 Tu pedido</h2>
+            <button id="vaciar-carrito" class="boton-texto">
+                Vaciar carrito
+            </button>
+        </div>
+
+        <div id="lista-carrito">
+            <p>Tu carrito está vacío.</p>
+        </div>
+
+        <div class="totales">
+            <p>Subtotal <strong id="subtotal">$0.00</strong></p>
+            <p>Envío <strong id="envio">$0.00</strong></p>
+            <p class="total-final">
+                Total <strong id="total">$0.00</strong>
+            </p>
+            <small id="mensaje-envio">
+                Agregá productos para comenzar.
+            </small>
+        </div>
+
+        <form id="form-pedido">
+            <h3>📍 Datos para la entrega</h3>
+
+            <label for="nombre">Tu nombre</label>
+            <input id="nombre" required maxlength="80"
+                autocomplete="name" placeholder="Nombre de quien recibe">
+
+            <label for="telefono">Tu teléfono</label>
+            <input id="telefono" type="tel" required maxlength="20"
+                autocomplete="tel" placeholder="Tu número de contacto">
+
+            <label for="direccion">Dirección de entrega</label>
+            <textarea id="direccion" required maxlength="300"
+                placeholder="Cantón, colonia, calle, casa y referencias"></textarea>
+
+            <label for="mapa">Enlace de Google Maps (opcional)</label>
+            <input id="mapa" type="url" maxlength="500"
+                placeholder="Pegá aquí el enlace de tu ubicación">
+
+            <label for="indicaciones">Indicaciones adicionales (opcional)</label>
+            <textarea id="indicaciones" maxlength="300"
+                placeholder="Referencias para encontrar tu casa"></textarea>
+
+            <button type="submit" class="boton-pedido">
+                Enviar pedido por WhatsApp
+            </button>
+
+            <p class="nota">
+                El pedido queda pendiente de confirmación de disponibilidad
+                y entrega por parte de la tienda.
+            </p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <h3>Tienda El Palmital J&amp;J</h3>
+    <p>Gracias por apoyar nuestro negocio local. 💚</p>
+    <small>© 2026 Tienda El Palmital J&amp;J</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
